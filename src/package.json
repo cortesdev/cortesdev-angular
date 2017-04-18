@@ -1,0 +1,42 @@
+{
+  "name": "Entertainment_Package",
+  "version": "1.0.0",
+  "description": "Paymentz",
+  "readme": "README.MD",
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "keywords": [
+    "Paymentz"
+  ],
+  "author": "Ricardo - Paxlife R&D",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "graceful-fs": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-bower": "*",
+    "gulp-imagemin": "*",
+    "gulp-include": "*",
+    "gulp-jshint": "*",
+    "gulp-livereload": "*",
+    "gulp-minify": "0.0.14",
+    "gulp-minify-css": "*",
+    "gulp-modernizr": "*",
+    "gulp-notify": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sass-image": "*",
+    "gulp-uglify": "*",
+    "gulp-watch": "*",
+    "gulp-zip": "*",
+    "jshint": "*",
+    "jshint-stylish": "*"
+  }
+}
