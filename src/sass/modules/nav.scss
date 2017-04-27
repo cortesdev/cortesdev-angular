@@ -1,9 +1,8 @@
 .logo {
-    padding: 14px;
     width: 60px;
     display: inline-block;
     background: #ffffff;
-    padding: 0;
+    padding: 14px;
     position: relative;
 
     @include breakpoint-min(medium) {
@@ -12,7 +11,7 @@
       margin: 0 auto;
     }
 }
-nav .social {
+nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
   display: none;
   @include breakpoint-min(medium) {
     position: absolute;
@@ -22,38 +21,81 @@ nav .social {
     display: block;
   }
 }
-
-nav {
-  width: 100%;
-  display: inline-block;
-  background: #ffffff;
-  padding: 0;
-  position: relative;
-  float: left;
-
-  @include breakpoint-min(medium) {
-    width: 60px;
-    min-height: 970px;
-    margin: 0 auto;
+//
+// nav.navbar-fixed-bottom, nav.navbar-fixed-top{
+//   width: 100%;
+//   display: inline-block;
+//   background: #ffffff;
+//   padding: 0;
+//   position: relative;
+//   float: left;
+//
+//   @include breakpoint-min(medium) {
+//     width: 60px;
+//     min-height: 970px;
+//     margin: 0 auto;
+//   }
+// }
+// .navbar-fixed-bottom, .navbar-fixed-top {
+//     position: relative;
+// }
+// nav ol {
+//   @include breakpoint-min(medium) {
+//     margin: 250px auto 300px;
+//     padding: 0;
+//   }
+// }
+//
+// nav li {
+//   display: inline;
+//   float: left;
+//   margin: 5px;
+// }
+//
+// nav ul li a {
+//   font-size: 16px;
+//   line-height: normal;
+//   text-align: center;
+//   color: #ffffff;
+//     @include breakpoint-min(medium) {
+//       text-align: normal;
+//     }
+// }
+@media (min-width: 768px) {
+  .navbar-collapse {
+    height: auto;
+    border-top: 0;
+    box-shadow: none;
+    max-height: none;
+    padding-left:0;
+    padding-right:0;
   }
-}
-
-nav ol {
-  @include breakpoint-min(medium) {
-    margin: 250px auto 300px;
-    padding: 0;
+  .navbar-collapse.collapse {
+    display: block !important;
+    width: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
   }
+  .navbar-collapse.in {
+    overflow-x: visible;
+  }
+
+.navbar
+{
+	max-width:300px;
+	margin-right: 0;
+	margin-left: 0;
 }
 
-nav li {
-  display: inline;
-  float: left;
-  margin: 5px;
-}
+.navbar-nav,
+.navbar-nav > li,
+.navbar-left,
+.navbar-right,
+.navbar-header
+{float:none !important;}
 
-nav ul li a {
-  font-size: 16px;
-  line-height: normal;
-  text-align: center;
-  color: #ffffff;
+.navbar-right .dropdown-menu {left:0;right:auto;}
+.navbar-collapse .navbar-nav.navbar-right:last-child {
+    margin-right: 0;
+}
 }
