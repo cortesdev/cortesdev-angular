@@ -21,7 +21,7 @@ particlesJS("particles-js", {
      },
      "image": {
        "src": "img/github.svg",
-       "width": 100,
+       "width":100,
        "height": 100
      }
    },
@@ -108,5 +108,4 @@ particlesJS("particles-js", {
  },
  "retina_detect": true
 });
-
-requestAnimationFrame();
+ 

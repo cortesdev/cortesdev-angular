@@ -25,7 +25,7 @@
         "../node_modules/jquery/dist/jquery.js",
         "../node_modules/bootstrap/dist/js/bootstrap.min.js",
         "../node_modules/particles.js/particles.js",
-        "../node_modules/particles.js/load.js"
+        "../src/js/inc/particles-json.js"
        ],
       "environments": {
         "source": "environments/environment.ts",
