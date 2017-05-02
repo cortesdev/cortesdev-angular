@@ -10,6 +10,7 @@ Tags:
 
 
 */
+  
 @import "../bower_components/bootstrap/dist/css/bootstrap.min.css";
 @import "colors/colors.scss";
 @import "base/reset.scss";
@@ -25,7 +26,8 @@ Tags:
 /** 01. typography / Icons
 **********************************/
 @import "typography/typography.scss";
-@import "../bower_components/font-Awesome/scss/font-awesome.scss";
+$fa-font-path: "../node_modules/font-awesome/fonts";
+@import "../node_modules/font-awesome/scss/font-awesome.scss";
 
 
 /** 02. Base

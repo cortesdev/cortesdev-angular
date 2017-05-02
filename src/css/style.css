@@ -109,7 +109,6 @@ html {
 /**********************************/
 /** 01.SCSS TYPOGRAPHY
 **********************************/
-/* vietnamese */
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -118,8 +117,8 @@ html {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("../node_modules/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../node_modules/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../node_modules/font-awesome/fonts/fontawesome-webfont.woff2}") format("woff2"), url("../node_modules/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../node_modules/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../node_modules/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -2656,7 +2655,7 @@ a.Btn, button.Btn, .Btn {
   background: transparent;
   padding-top: 0;
   padding-bottom: 0;
-  margin-right: 0;
+  margin-left: 10px;
   font-size: 0;
   position: absolute;
   top: 16px; }
@@ -2664,7 +2663,7 @@ a.Btn, button.Btn, .Btn {
     .logo {
       width: 60px;
       min-height: 60px;
-      margin: 0 auto; } }
+      margin: 0 15px; } }
 
 .navbar-toggler {
   margin-top: 8px;
@@ -2673,8 +2672,8 @@ a.Btn, button.Btn, .Btn {
 .navbar-fixed-bottom, .navbar-fixed-top {
   width: 100%;
   min-height: 60px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 0;
+  padding-left: 0;
   overflow-x: visible;
   border-top: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -2688,14 +2687,26 @@ a.Btn, button.Btn, .Btn {
       height: 100vh;
       right: auto; } }
 
-.nav {
-  padding-left: 0;
+.nav, .social {
+  padding: 0 17px;
   margin-bottom: 0;
   list-style: none; }
 
-.navbar-nav .nav-item {
-  float: none;
-  display: inline; }
+@media (min-width: 768px) {
+  .nav {
+    top: 24vh;
+    position: absolute; } }
+
+[class^="fa-"], [class*=" fa-"], .fa {
+  display: none;
+  width: 100%;
+  -webkit-transform: translateY(-4%);
+          transform: translateY(-4%);
+  left: 0px;
+  top: -7px; }
+  @media (min-width: 400px) {
+    [class^="fa-"], [class*=" fa-"], .fa {
+      display: inline-block; } }
 
 #exCollapsingNavbar2 {
   position: relative;
@@ -2706,20 +2717,11 @@ a.Btn, button.Btn, .Btn {
     #exCollapsingNavbar2 {
       display: block; } }
 
-@media (min-width: 543px) and (max-width: 768px) {
-  .collapse {
-    display: inline-block !important;
-    margin-top: 0;
-    margin-top: 0; }
-  #exCollapsingNavbar2 {
-    margin-top: 0; }
-  .nav {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    position: absolute;
-    left: 30%;
-    right: 32%; } }
+.nav > li > a {
+  padding: 0; }
+  @media (min-width: 768px) {
+    .nav > li > a {
+      font-size: 10px; } }
 
 .nav > li {
   position: relative;
@@ -2736,12 +2738,125 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
   display: none; }
   @media (min-width: 768px) {
     nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
-      padding: 0;
       position: absolute;
       bottom: 0;
-      height: 170px;
+      height: 120px;
       width: 6px;
       display: block; } }
+  nav.navbar-fixed-bottom .social li, nav.navbar-fixed-top .social li {
+    margin-bottom: 6px;
+    width: 26px;
+    text-align: center;
+    float: left;
+    margin-left: auto;
+    margin-right: auto; }
+
+.navbar-fixed-top .navbar-nav li a:hover i {
+  opacity: 1; }
+
+.navbar-fixed-top .navbar-nav li a:after {
+  content: 'HOME'; }
+
+.navbar-fixed-top .navbar-nav li + li a:after {
+  content: 'ABOUT'; }
+
+.navbar-fixed-top .navbar-nav li + li + li a:after {
+  content: 'SKILLS'; }
+
+.navbar-fixed-top .navbar-nav li + li + li + li a:after {
+  content: 'MY WORK'; }
+
+.navbar-fixed-top .navbar-nav li + li + li + li + li a:after {
+  content: 'CONTACT'; }
+
+@media (max-width: 329px) {
+  .navbar-nav li a {
+    font-size: 13px !important; } }
+
+@media (min-width: 400px) {
+  .navbar-fixed-top .navbar-nav li a i {
+    transition: all 0.3s ease-out;
+    width: 25px;
+    text-align: center;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px; }
+  .navbar-fixed-top .navbar-nav li a:hover i {
+    opacity: 0; }
+  .navbar-fixed-top .navbar-nav li a.active,
+  .navbar-fixed-top .navbar-nav li a:hover {
+    color: black; }
+  .navbar-fixed-top .navbar-nav li a:after {
+    content: '';
+    font-size: 13px;
+    position: absolute;
+    margin-top: 0;
+    left: 7px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease-out;
+    opacity: 0; } }
+  @media (min-width: 400px) and (min-width: 0) and (max-width: 543px) {
+    .navbar-fixed-top .navbar-nav li a:after {
+      opacity: 1; } }
+
+@media (min-width: 400px) {
+  .navbar-fixed-top .navbar-nav li a:after {
+    content: 'HOME'; }
+  .navbar-fixed-top .navbar-nav li + li a:after {
+    content: 'ABOUT'; }
+  .navbar-fixed-top .navbar-nav li + li + li a:after {
+    content: 'SKILLS'; }
+  .navbar-fixed-top .navbar-nav li + li + li + li a:after {
+    content: 'MY WORK'; }
+  .navbar-fixed-top .navbar-nav li + li + li + li + li a:after {
+    content: 'CONTACT'; }
+  .navbar-fixed-top .navbar-nav li a:hover:after {
+    opacity: 1; } }
+
+@media (min-width: 768px) {
+  .navbar-fixed-top .navbar-nav li a:after {
+    font-size: 9px;
+    position: absolute;
+    margin-top: 0;
+    left: -3px; }
+  .navbar-fixed-top .navbar-nav li a {
+    font-size: 24px;
+    color: #4d4d4e;
+    display: block;
+    line-height: 45px;
+    height: 45px;
+    position: relative; } }
+
+@media (min-width: 386px) and (max-width: 543px) {
+  .fa {
+    display: none; } }
+
+@media (min-width: 543px) and (max-width: 768px) {
+  .collapse {
+    display: inherit;
+    margin-top: 0;
+    margin-top: 0; }
+  #exCollapsingNavbar2 {
+    margin-top: 0; }
+  .nav {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    position: absolute;
+    left: 30%;
+    right: 32%;
+    top: 50%; }
+  .navbar-light .navbar-nav .nav-link {
+    padding-left: 0; }
+  .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px; } }
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -2753,7 +2868,7 @@ body {
 
 a {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 22px;
   color: #000000; }
 

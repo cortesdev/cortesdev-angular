@@ -32,7 +32,7 @@ var config = {
      bowerDir: './bower_components' 
 }
 
- 
+
 
 // Default error handler
 var onError = function( err ) {
@@ -73,7 +73,7 @@ gulp.task( 'jshint', function() {
 })
 
 
-// Concatenates all files that it finds in the manifest 
+// Concatenates all files that it finds in the manifest
 // and creates two versions: normal and minified.
 // It's dependent on the jshint task to succeed.
 gulp.task( 'scripts', ['jshint'], function() {
@@ -221,6 +221,3 @@ gulp.task( 'watch', function() {
 gulp.task('default', ['watch'], function() {
   // place code for your default task here
 });
-
-
-
