@@ -1,4 +1,29 @@
 
-.footer {
-  float: left;
+footer {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    height: 30px;
+    width: 90%;
+
+    [class^='fa-'], [class*=' fa-'], .fa {
+        display: inline;
+    }
+
+ 
+    .angular {
+      height: 23px;
+      width: 27px;
+      display: inline-block;
+      text-align: center;
+      vertical-align: bottom;
+      position: relative;
+      margin-right: 0px;
+      margin-bottom: -5px;
+    }
+
+    p {
+      font-size: 14px;
+      text-align: center;
+    }
 }

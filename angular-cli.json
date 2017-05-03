@@ -11,7 +11,7 @@
       "assets",
       "favicon.ico"
     ],
-     
+
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
@@ -23,6 +23,7 @@
         "styles.css"
       ],
       "scripts": [
+        "../src/js/dist/scripts.min.js",
         "../node_modules/jquery/dist/jquery.js",
         "../node_modules/bootstrap/dist/js/bootstrap.min.js",
         "../node_modules/particles.js/particles.js",
@@ -75,5 +76,3 @@
     }
   }
 }
-
- 

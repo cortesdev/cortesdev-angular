@@ -1,6 +1,6 @@
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family:'Montserrat';
   font-size: 18px;
   line-height: 22px;
   color: #FFFFFF;
@@ -31,11 +31,21 @@ canvas {
 
 #container {
   width: 100%;
-  max-width: 1345px;
-  margin: 0 auto;
+  max-width: 1024px;
+  margin:0 auto;
   padding: 0;
+  @include breakpoint-min(medium) {
+    max-width: 80%;
+  }
 }
 
-main {
+h1{
+  font-weight: bold;
+  color: #ffffff;
+  font-size:45px;
+  max-width: 70%;
+ }
 
+.Intro {
+  margin-top: 100px;
 }

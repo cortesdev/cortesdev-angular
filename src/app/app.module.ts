@@ -8,8 +8,10 @@ import { navComponent } from './nav/app.navComponent';
 import { contentAreaComponent } from './contentArea/app.contentAreaComponent';
 import { footerComponent } from './footer/app.footerComponent';
 import { contactComponent } from './contact/app.contactComponent';
+import { loaderComponent } from './loader/app.loaderComponent';
 
 import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
+import { InlineSVGModule } from 'ng-inline-svg';
 
 
 
@@ -31,6 +33,7 @@ let sampleTemplate = `
     BrowserModule,
     Angular2FontawesomeModule,
     FormsModule,
+    InlineSVGModule,
     HttpModule
   ],
   providers: [],

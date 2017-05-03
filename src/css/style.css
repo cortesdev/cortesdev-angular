@@ -29,7 +29,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  color: #4A4A4A; }
+  color: #4A4A4A;
+  font-family: 'Montserrat';
+  line-height: normal; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -118,7 +120,7 @@ html {
 @font-face {
   font-family: 'FontAwesome';
   src: url("../node_modules/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0");
-  src: url("../node_modules/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../node_modules/font-awesome/fonts/fontawesome-webfont.woff2}") format("woff2"), url("../node_modules/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../node_modules/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../node_modules/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("../node_modules/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../node_modules/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../node_modules/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../node_modules/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../node_modules/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -2609,6 +2611,7 @@ span.field {
 **********************************/
 a.Btn, button.Btn, .Btn {
   font-family: 'montserratsemi_bold';
+  -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
   border-radius: 4px;
   background-color: #2cabe2;
@@ -2764,7 +2767,7 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
   content: 'SKILLS'; }
 
 .navbar-fixed-top .navbar-nav li + li + li + li a:after {
-  content: 'MY WORK'; }
+  content: 'WORK'; }
 
 .navbar-fixed-top .navbar-nav li + li + li + li + li a:after {
   content: 'CONTACT'; }
@@ -2775,6 +2778,7 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
 
 @media (min-width: 400px) {
   .navbar-fixed-top .navbar-nav li a i {
+    -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     width: 25px;
     text-align: center;
@@ -2790,7 +2794,6 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
   .navbar-fixed-top .navbar-nav li a:after {
     content: '';
     font-size: 13px;
-    position: absolute;
     margin-top: 0;
     left: 7px;
     display: -webkit-box;
@@ -2798,6 +2801,7 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
     display: flex;
     width: 100%;
     text-align: center;
+    -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     opacity: 0; } }
   @media (min-width: 400px) and (min-width: 0) and (max-width: 543px) {
@@ -2812,9 +2816,14 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
   .navbar-fixed-top .navbar-nav li + li + li a:after {
     content: 'SKILLS'; }
   .navbar-fixed-top .navbar-nav li + li + li + li a:after {
-    content: 'MY WORK'; }
+    content: 'WORK'; }
   .navbar-fixed-top .navbar-nav li + li + li + li + li a:after {
-    content: 'CONTACT'; }
+    content: 'CONTACT'; } }
+  @media (min-width: 400px) and (min-width: 768px) {
+    .navbar-fixed-top .navbar-nav li + li + li + li + li a:after {
+      left: -9px; } }
+
+@media (min-width: 400px) {
   .navbar-fixed-top .navbar-nav li a:hover:after {
     opacity: 1; } }
 
@@ -2859,7 +2868,7 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
     padding: 10px 15px; } }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat';
   font-size: 18px;
   line-height: 22px;
   color: #FFFFFF;
@@ -2886,9 +2895,42 @@ canvas {
 
 #container {
   width: 100%;
-  max-width: 1345px;
+  max-width: 1024px;
   margin: 0 auto;
   padding: 0; }
+  @media (min-width: 768px) {
+    #container {
+      max-width: 80%; } }
+
+h1 {
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 45px;
+  max-width: 70%; }
+
+.Intro {
+  margin-top: 100px; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  height: 30px;
+  width: 90%; }
+  footer [class^='fa-'], footer [class*=' fa-'], footer .fa {
+    display: inline; }
+  footer .angular {
+    height: 23px;
+    width: 27px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: bottom;
+    position: relative;
+    margin-right: 0px;
+    margin-bottom: -5px; }
+  footer p {
+    font-size: 14px;
+    text-align: center; }
 
 /** 04. Pages
 **********************************/

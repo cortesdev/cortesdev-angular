@@ -137,10 +137,11 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
       content: 'SKILLS';
   }
   .navbar-fixed-top .navbar-nav li + li + li + li a:after {
-      content: 'MY WORK';
+      content: 'WORK';
   }
   .navbar-fixed-top .navbar-nav li + li + li + li + li a:after {
       content: 'CONTACT';
+
   }
 
 // NAVIGATION
@@ -178,7 +179,6 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
   .navbar-fixed-top .navbar-nav li a:after {
       content: '';
       font-size: 13px;
-      position: absolute;
       margin-top: 0;
       left: 7px;
       display: flex;
@@ -203,10 +203,14 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
       content: 'SKILLS';
   }
   .navbar-fixed-top .navbar-nav li + li + li + li a:after {
-      content: 'MY WORK';
+      content: 'WORK';
   }
   .navbar-fixed-top .navbar-nav li + li + li + li + li a:after {
       content: 'CONTACT';
+
+      @include breakpoint-min(medium) {
+        left: -9px;
+      }
   }
 
 
