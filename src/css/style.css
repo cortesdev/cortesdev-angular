@@ -12,6 +12,7 @@ Tags:
 
 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*!
  * Bootstrap v4.0.0-alpha.2 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -4617,6 +4618,9 @@ a.bg-danger:focus, a.bg-danger:hover {
 =======
 @import url(../bower_components/bootstrap/dist/css/bootstrap.min.css);
 >>>>>>> dev
+=======
+@import url(../bower_components/bootstrap/dist/css/bootstrap.min.css);
+>>>>>>> 9b0fa57aaf8e955d6fff0281c2780a7c40e2e40e
 /**********************************/
 /** 01.SCSS COLORS
 **********************************/
