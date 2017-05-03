@@ -10,15 +10,10 @@ import { footerComponent } from './footer/app.footerComponent';
 import { contactComponent } from './contact/app.contactComponent';
 import { loaderComponent } from './loader/app.loaderComponent';
 
-import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
-import { InlineSVGModule } from 'ng-inline-svg';
+ import { InlineSVGModule } from 'ng-inline-svg';
 
 
 
-let sampleTemplate = `
-<fa [name]="rocket" [border]=true></i>
-<i fa [name]="rocket" [border]=true></i>
-`
 
 @NgModule({
   declarations: [
@@ -31,7 +26,6 @@ let sampleTemplate = `
   ],
   imports: [
     BrowserModule,
-    Angular2FontawesomeModule,
     FormsModule,
     InlineSVGModule,
     HttpModule

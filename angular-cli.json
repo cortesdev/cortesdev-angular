@@ -19,7 +19,6 @@
       "tsconfig": "tsconfig.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/font-awesome/css/font-awesome.min.css",
         "styles.css"
       ],
       "scripts": [
@@ -35,9 +34,6 @@
         "prod": "environments/environment.prod.ts"
       }
     }
-  ],
-  "addons": [
-    "../node_modules/font-awesome/fonts/*.+(otf|eot|svg|ttf|woff|woff2)"
   ],
   "e2e": {
     "protractor": {

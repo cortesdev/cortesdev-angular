@@ -1,5 +1,5 @@
-// This example is following to Angular2 Quick Start Documentation 
- 
+// This example is following to Angular2 Quick Start Documentation
+
 (function (global) {
   System.config({
     paths: {
@@ -7,7 +7,7 @@
     },
     map: {
       app: 'app',
- 
+
       '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
       '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
       '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
@@ -17,12 +17,8 @@
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
       '@angular/upgrade': 'npm:@angular/upgrade/bundles/upgrade.umd.js',
- 
+
       'rxjs':                      'npm:rxjs',
-      'angular-in-memory-web-api': 'npm:angular-in-memory-web-api',
- 
-      // Add this line (1/2) 
-      'angular2-fontawesome': 'node_modules/angular2-fontawesome',
     },
     packages: {
       app: {
@@ -36,10 +32,6 @@
         main: './index.js',
         defaultExtension: 'js'
       },
- 
-      // Add this line (2/2) 
-      'angular2-fontawesome': { defaultExtension: 'js' }
-    }
+     }
   });
 })(this);
- 
