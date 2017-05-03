@@ -18,8 +18,8 @@
           <li class="nav-item">
             <a href="/about" class=""><i class="fa fa-user-secret" ></i></a>
           </li>
-          <li class="nav-item">
-              <a ng-show="showDetails" class=""><i class="fa fa-envelope-o"></i></a>
+          <li class="nav-item" ng-controller="MyCtrl">
+              <a ng-click="show = !show" class=""><i class="fa fa-envelope-o"></i></a>
           </li>
       </ol>
 </div>

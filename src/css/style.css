@@ -120,7 +120,7 @@ html {
 @font-face {
   font-family: 'FontAwesome';
   src: url("../node_modules/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0");
-  src: url("../node_modules/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../node_modules/font-awesome/fonts/fontawesome-webfont.woff2}") format("woff2"), url("../node_modules/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../node_modules/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../node_modules/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("../node_modules/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../node_modules/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../node_modules/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../node_modules/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../node_modules/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -2611,6 +2611,7 @@ span.field {
 **********************************/
 a.Btn, button.Btn, .Btn {
   font-family: 'montserratsemi_bold';
+  -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
   border-radius: 4px;
   background-color: #2cabe2;
@@ -2777,6 +2778,7 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
 
 @media (min-width: 400px) {
   .navbar-fixed-top .navbar-nav li a i {
+    -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     width: 25px;
     text-align: center;
@@ -2799,6 +2801,7 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
     display: flex;
     width: 100%;
     text-align: center;
+    -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     opacity: 0; } }
   @media (min-width: 400px) and (min-width: 0) and (max-width: 543px) {
