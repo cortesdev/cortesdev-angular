@@ -42,10 +42,20 @@ canvas {
 h1{
   font-weight: bold;
   color: #ffffff;
-  font-size:45px;
+  font-size:30px;
   max-width: 70%;
+    @include breakpoint-min(small) {
+      font-size: 35px;
+    }
+
+    @include breakpoint-min(medium) {
+      font-size: 45px;
+    }
  }
 
 .Intro {
-  margin-top: 100px;
+  margin-top: 60px;
+  @include breakpoint-min(medium) {
+    margin-top: 100px;
+  }
 }

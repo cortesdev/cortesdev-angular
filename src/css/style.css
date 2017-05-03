@@ -2902,13 +2902,22 @@ canvas {
 h1 {
   font-weight: bold;
   color: #ffffff;
-  font-size: 45px;
+  font-size: 30px;
   max-width: 70%; }
+  @media (min-width: 400px) {
+    h1 {
+      font-size: 35px; } }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 45px; } }
 
 .Intro {
-  margin-top: 100px; }
+  margin-top: 60px; }
+  @media (min-width: 768px) {
+    .Intro {
+      margin-top: 100px; } }
 
-.Intro {
+#container {
   pointer-events: none; }
 
 footer {
