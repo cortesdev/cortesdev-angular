@@ -52,7 +52,7 @@ gulp.task('zip', function () {
    '!bower_components',
    '!node_modules',
   ], {base: "."})
-  .pipe(zip('Cortesdev.zip'))
+  .pipe(zip('paxlife.zip'))
   .pipe(gulp.dest('.'));
 });
 
