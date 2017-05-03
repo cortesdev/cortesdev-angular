@@ -64,9 +64,11 @@
     width: 100%;
     transform: translateY(-4%);
     left: 0px;
-    top: -7px;
+    margin-top: 11px;
     @include breakpoint-min(small) {
         display: inline-block;
+        margin-top: 0;
+
     }
 }
 
@@ -82,16 +84,18 @@
     }
 
   }
-.nav>li>a {
-    padding: 0;
-    @include breakpoint-min(medium) {
-      font-size: 10px;
-    }
-}
+
   .nav>li {
       position: relative;
       display: inline-block;
 
+  }
+
+  .nav>li>a {
+      padding: 0;
+      @include breakpoint-min(medium) {
+        font-size: 10px;
+      }
   }
 
   .navbar-nav .nav-item+.nav-item {
@@ -152,7 +156,7 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
   }
  }
 
- @include breakpoint-min(small) {
+@include breakpoint-min(small) {
 
 
 
@@ -179,19 +183,24 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
   .navbar-fixed-top .navbar-nav li a:after {
       content: '';
       font-size: 13px;
-      margin-top: 0;
-      left: 7px;
-      display: flex;
+      top: 10px;
+      left: 16%;
+      position: absolute;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      font-size: 10px;
+      /* display: flex; */
       width: 100%;
       text-align: center;
       -webkit-transition: all 0.3s ease-out;
       transition: all 0.3s ease-out;
       opacity: 0;
-
       @media (min-width: 0) and (max-width: 543px) {
         opacity: 1;
       }
-
+      @include breakpoint-min(medium) {
+          top: -10px;
+      }
   }
   .navbar-fixed-top .navbar-nav li a:after {
       content: 'HOME';
@@ -228,7 +237,6 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
   position: absolute;
   margin-top: 0;
   left: -3px;
-
 }
   .navbar-fixed-top .navbar-nav li a{
     font-size: 24px;
@@ -237,9 +245,7 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
     line-height: 45px;
     height: 45px;
     position: relative;
-
   }
-
 }
 @media (min-width: 386px) and (max-width: 543px) {
      .fa {
@@ -261,7 +267,7 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
     .nav {
       display: inline-flex;
       position: absolute;
-      left: 30%;
+      left: 25%;
       right: 32%;
       top: 50%;
     }
