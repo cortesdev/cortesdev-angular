@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 
 @Component({
-  selector: 'contact',
+  // selector: 'contact',
   templateUrl: './contact.html',
  })
 
