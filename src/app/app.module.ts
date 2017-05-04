@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { headerComponent } from './header/app.headerComponent';
@@ -23,7 +22,6 @@ import { InlineSVGModule } from 'ng-inline-svg';
     FormsModule,
     InlineSVGModule,
     HttpModule,
-    BrowserAnimationsModule,
     RouterModule.forRoot([
       {
         path:'about',

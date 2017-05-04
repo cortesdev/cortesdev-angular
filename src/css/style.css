@@ -609,7 +609,8 @@ h1 {
       font-size: 45px; } }
 
 .Intro {
-  margin-top: 60px; }
+  margin-top: 60px;
+  pointer-events: none; }
   @media (min-width: 768px) {
     .Intro {
       margin-top: 100px; } }
