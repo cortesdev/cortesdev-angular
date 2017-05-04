@@ -22,7 +22,7 @@ Tags:
  * http://cssreset.com
  */
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
-@import url("../bower_components/font-awesome/scss/font-awesome.scss");
+@import url("../bower_components/font-awesome/css/font-awesome.css");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -111,13 +111,11 @@ label:focus,
   0% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
     transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    -webkit-transition-timing-function: ease-in;
     transition-timing-function: ease-in;
     opacity: 0; }
   40% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
     transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    -webkit-transition-timing-function: ease-in;
     transition-timing-function: ease-in; }
   60% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
@@ -134,13 +132,11 @@ label:focus,
   0% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
     transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    -webkit-transition-timing-function: ease-in;
     transition-timing-function: ease-in;
     opacity: 0; }
   40% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
     transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    -webkit-transition-timing-function: ease-in;
     transition-timing-function: ease-in; }
   60% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
@@ -174,7 +170,6 @@ label:focus,
   opacity: 1; }
 
 .fade.ng-enter, .fade.ng-leave {
-  -webkit-transition: 0.5s linear all;
   transition: 0.5s linear all; }
 
 .fade.ng-leave,
@@ -289,7 +284,6 @@ canvas {
 **********************************/
 a.Btn, button.Btn, .Btn {
   font-family: 'montserratsemi_bold';
-  -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
   border-radius: 4px;
   background-color: #2cabe2;
@@ -339,12 +333,14 @@ a.Btn, button.Btn, .Btn {
   margin-left: 10px;
   font-size: 0;
   position: absolute;
-  top: 16px; }
+  top: 16px;
+  min-height: 30px;
+  margin: 0 15px; }
   @media (min-width: 768px) {
     .logo {
-      width: 60px;
-      min-height: 60px;
-      margin: 0 15px; } }
+      width: 30px;
+      min-height: 30px;
+      margin: 10px 15px; } }
 
 .navbar-toggler {
   margin-top: 8px;
@@ -372,6 +368,10 @@ a.Btn, button.Btn, .Btn {
   padding: 0 17px;
   margin-bottom: 0;
   list-style: none; }
+
+@media (min-width: 399px) and (max-width: 543px) {
+  .nav {
+    padding: 10px 17px; } }
 
 @media (min-width: 768px) {
   .nav {
@@ -404,7 +404,10 @@ a.Btn, button.Btn, .Btn {
   display: inline-block; }
 
 .nav > li > a {
-  padding: 0; }
+  padding: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
   @media (min-width: 768px) {
     .nav > li > a {
       font-size: 10px; } }
@@ -457,7 +460,6 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
 
 @media (min-width: 400px) {
   .navbar-fixed-top .navbar-nav li a i {
-    -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     width: 25px;
     text-align: center;
@@ -474,23 +476,31 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
     content: '';
     font-size: 13px;
     top: 10px;
-    left: 16%;
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    left: 0;
+    position: relative;
     font-size: 10px;
-    /* display: flex; */
+    display: block;
     width: 100%;
-    text-align: center;
-    -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     opacity: 0; } }
   @media (min-width: 400px) and (min-width: 0) and (max-width: 543px) {
     .navbar-fixed-top .navbar-nav li a:after {
       opacity: 1; } }
+  @media (min-width: 400px) and (min-width: 400px) {
+    .navbar-fixed-top .navbar-nav li a:after {
+      top: -21px; } }
   @media (min-width: 400px) and (min-width: 768px) {
     .navbar-fixed-top .navbar-nav li a:after {
       top: -10px; } }
+  @media (min-width: 400px) and (min-width: 992px) {
+    .navbar-fixed-top .navbar-nav li a:after {
+      left: 16%;
+      text-align: center;
+      display: inline-block;
+      position: absolute;
+      display: block;
+      width: 100%;
+      text-align: left; } }
 
 @media (min-width: 400px) {
   .navbar-fixed-top .navbar-nav li a:after {
@@ -554,7 +564,6 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
 body {
   font-family: 'Montserrat';
   font-size: 18px;
-  background: pink;
   line-height: 22px;
   color: #FFFFFF;
   margin: 0 auto;

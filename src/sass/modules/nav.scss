@@ -13,11 +13,13 @@
     font-size: 0;
     position: absolute;
     top: 16px;
+    min-height: 30px;
+    margin: 0 15px;
 
     @include breakpoint-min(medium) {
-      width: 60px;
-      min-height: 60px;
-      margin: 0 15px;
+      width: 30px;
+      min-height: 30px;
+      margin: 10px 15px;
     }
 }
 
@@ -52,6 +54,9 @@
     list-style: none;
 }
 .nav {
+  @media (min-width: 399px) and (max-width: 543px) {
+    padding: 10px 17px;
+  }
   @include breakpoint-min(medium) {
     top: 24vh;
     position: absolute;
@@ -88,11 +93,11 @@
   .nav>li {
       position: relative;
       display: inline-block;
-
   }
 
   .nav>li>a {
       padding: 0;
+      display: inline-flex;
       @include breakpoint-min(medium) {
         font-size: 10px;
       }
@@ -184,22 +189,34 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
       content: '';
       font-size: 13px;
       top: 10px;
-      left: 16%;
-      position: absolute;
-      display: -webkit-box;
-      display: -ms-flexbox;
+      left: 0;
+      position: relative;
       font-size: 10px;
-      /* display: flex; */
+      display: block;
       width: 100%;
-      text-align: center;
       -webkit-transition: all 0.3s ease-out;
       transition: all 0.3s ease-out;
       opacity: 0;
       @media (min-width: 0) and (max-width: 543px) {
         opacity: 1;
       }
+      @include breakpoint-min(small) {
+        top: -21px;
+
+      }
+
       @include breakpoint-min(medium) {
-          top: -10px;
+        top: -10px;
+
+      }
+      @include breakpoint-min(large) {
+          left: 16%;
+          text-align: center;
+          display: inline-block;
+          position: absolute;
+          display: block;
+          width: 100%;
+          text-align: left;
       }
   }
   .navbar-fixed-top .navbar-nav li a:after {
