@@ -1,2 +1,3 @@
- 
-//= include application.js
+
+//= include angular.min.js
+//= include inc/typer.min.js
