@@ -5,12 +5,12 @@ footer {
     display: block;
     height: 30px;
     width: 90%;
-
+    pointer-events: none;
     [class^='fa-'], [class*=' fa-'], .fa {
         display: inline;
     }
 
- 
+
     .angular {
       height: 23px;
       width: 27px;

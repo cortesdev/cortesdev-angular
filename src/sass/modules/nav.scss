@@ -146,13 +146,14 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
       content: 'SKILLS';
   }
   .navbar-fixed-top .navbar-nav li + li + li + li a:after {
-      content: 'WORK';
+      content: 'CODING';
   }
   .navbar-fixed-top .navbar-nav li + li + li + li + li a:after {
-      content: 'CONTACT';
-
+      content: 'WORK';
   }
-
+  .navbar-fixed-top .navbar-nav li + li + li + li + li + li a:after {
+      content: 'CONTACT';
+  }
 // NAVIGATION
 .navbar-nav li a {
     @include breakpoint-max(x-small) {
@@ -229,9 +230,12 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
       content: 'SKILLS';
   }
   .navbar-fixed-top .navbar-nav li + li + li + li a:after {
-      content: 'WORK';
+      content: 'CODING';
   }
   .navbar-fixed-top .navbar-nav li + li + li + li + li a:after {
+      content: 'WORK';
+  }
+  .navbar-fixed-top .navbar-nav li + li + li + li + li + li a:after {
       content: 'CONTACT';
 
       @include breakpoint-min(medium) {

@@ -449,9 +449,12 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
   content: 'SKILLS'; }
 
 .navbar-fixed-top .navbar-nav li + li + li + li a:after {
-  content: 'WORK'; }
+  content: 'CODING'; }
 
 .navbar-fixed-top .navbar-nav li + li + li + li + li a:after {
+  content: 'WORK'; }
+
+.navbar-fixed-top .navbar-nav li + li + li + li + li + li a:after {
   content: 'CONTACT'; }
 
 @media (max-width: 329px) {
@@ -510,11 +513,13 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
   .navbar-fixed-top .navbar-nav li + li + li a:after {
     content: 'SKILLS'; }
   .navbar-fixed-top .navbar-nav li + li + li + li a:after {
-    content: 'WORK'; }
+    content: 'CODING'; }
   .navbar-fixed-top .navbar-nav li + li + li + li + li a:after {
+    content: 'WORK'; }
+  .navbar-fixed-top .navbar-nav li + li + li + li + li + li a:after {
     content: 'CONTACT'; } }
   @media (min-width: 400px) and (min-width: 768px) {
-    .navbar-fixed-top .navbar-nav li + li + li + li + li a:after {
+    .navbar-fixed-top .navbar-nav li + li + li + li + li + li a:after {
       left: -9px; } }
 
 @media (min-width: 400px) {
@@ -620,7 +625,8 @@ footer {
   bottom: 0;
   display: block;
   height: 30px;
-  width: 90%; }
+  width: 90%;
+  pointer-events: none; }
   footer [class^='fa-'], footer [class*=' fa-'], footer .fa {
     display: inline; }
   footer .angular {
