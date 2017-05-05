@@ -93,7 +93,6 @@ gulp.task( 'scripts', ['jshint'], function() {
     .pipe( rename( { suffix: '.min' } ) )
     .pipe( gulp.dest( './src/js/dist' ) )
     .pipe(notify({ message: 'scripts task complete' }))
-    .pipe( livereload() );
 } );
 
 // Different options for the Sass tasks
@@ -121,23 +120,23 @@ options.sassmin = {
 // Sass STYLE
 gulp.task('sass', function() {
     return gulp.src('./src/sass/style.scss')
+        .on('error', swallowError)
         .pipe(plumber())
         .pipe(sass(options.sass))
         .pipe(autoprefixer())
         .pipe(gulp.dest('./src/css'))
-        .on('error', swallowError)
         .pipe(notify({ title: 'Sass', message: 'sass task complete'  }));
 });
 
 // Sass-min - Release build minifies CSS after compiling Sass
 gulp.task('sass-min', function() {
     return gulp.src('./src/sass/style.scss')
+        .on('error', swallowError)
         .pipe(plumber())
         .pipe(sass(options.sassmin))
         .pipe(autoprefixer())
         .pipe( rename( { suffix: '.min' } ) )
         .pipe(gulp.dest('./src/css'))
-        .on('error', swallowError)
         .pipe(notify({ title: 'Sass', message: 'sass-min task complete' }));
 });
 
@@ -162,13 +161,10 @@ gulp.task( 'watch', function() {
 
   gulp.watch( './**/*.php' ).on( 'change', function( file ) {
     // reload browser whenever any PHP file changes
-    livereload.changed( file );
+
+    // livereload.changed( file );
   } );
 } );
-
-
-
-
 
 
 // END Sass Style (ONLY WHEN PROJECT IS READY)

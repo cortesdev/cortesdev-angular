@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
-import { headerComponent } from './header/app.headerComponent';
-import { navComponent } from './nav/app.navComponent';
-import { contentAreaComponent } from './contentArea/app.contentAreaComponent';
-import { footerComponent } from './footer/app.footerComponent';
-import { contactComponent } from './contact/app.contactComponent';
-import { aboutComponent } from './about/app.aboutComponent';
+import {enableProdMode} from '@angular/core';
 
-import { loaderComponent } from './loader/app.loaderComponent';
+enableProdMode();
+
+import { headerComponent } from './modules/header/app.headerComponent';
+import { navComponent } from './modules/nav/app.navComponent';
+import { footerComponent } from './modules/footer/app.footerComponent';
+import { typerComponent } from './modules/typer/app.typerComponent';
+
+import { contentAreaComponent } from './views/contentArea/app.contentAreaComponent';
+import { contactComponent } from './views/contact/app.contactComponent';
+import { aboutComponent } from './views/about/app.aboutComponent';
+
+import { loaderComponent } from './views/loader/app.loaderComponent';
 
 
 
