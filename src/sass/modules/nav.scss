@@ -128,10 +128,18 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
     float:left;
     margin-left: auto;
     margin-right: auto;
+    &:hover a i {
+      color: black;
+      -webkit-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+
   }
 }
-
-
+section {
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
   .navbar-fixed-top .navbar-nav li a:hover i {
       opacity: 1;
   }

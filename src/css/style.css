@@ -166,18 +166,24 @@ label:focus,
     transform: translate3d(100%, 0, 0) skewX(30deg);
     opacity: 0; } }
 
-.fade {
+.main {
   opacity: 1; }
 
-.fade.ng-enter, .fade.ng-leave {
+.main.ng-enter, .fade.ng-leave {
   transition: 0.5s linear all; }
 
-.fade.ng-leave,
-.fade.ng-enter.ng-enter-active {
+.main.ng-leave,
+.main.ng-enter.ng-enter-active {
   opacity: 1; }
 
-.fade.ng-enter,
-.fade.ng-leave.ng-leave-active {
+.main.fade.ng-enter-active {
+  -webkit-animation-delay: 3s;
+  /* Safari 4.0 - 8.0 */
+  animation-delay: 3s;
+  opacity: 0; }
+
+.main.ng-enter,
+.main.ng-leave.ng-leave-active {
   opacity: 0; }
 
 /**********************************/
@@ -435,6 +441,12 @@ nav.navbar-fixed-bottom .social, nav.navbar-fixed-top .social {
     float: left;
     margin-left: auto;
     margin-right: auto; }
+    nav.navbar-fixed-bottom .social li:hover a i, nav.navbar-fixed-top .social li:hover a i {
+      color: black;
+      transition: all 0.3s ease-out; }
+
+section {
+  transition: all 1s ease-out; }
 
 .navbar-fixed-top .navbar-nav li a:hover i {
   opacity: 1; }
@@ -624,11 +636,24 @@ footer {
   position: absolute;
   bottom: 0;
   display: block;
-  height: 30px;
-  width: 90%;
-  pointer-events: none; }
+  height: 60px;
+  width: 90%; }
   footer [class^='fa-'], footer [class*=' fa-'], footer .fa {
     display: inline; }
+  footer .social {
+    padding: 0 17px;
+    margin-bottom: 0;
+    list-style: none;
+    width: 168px;
+    margin: 0 auto 6px; }
+    footer .social [class^='fa-'], footer .social [class*=' fa-'], footer .social .fa {
+      display: inline-block; }
+    footer .social li {
+      margin-left: 9px;
+      display: inline-block; }
+      footer .social li:hover a i {
+        color: white;
+        transition: all 0.3s ease-out; }
   footer .angular {
     height: 23px;
     width: 27px;

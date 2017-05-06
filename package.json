@@ -80,7 +80,7 @@
     "gulp-uglify": "*",
     "gulp-usemin": "^0.3.28",
     "gulp-watch": "*",
-    "gulp-zip": "*",    
+    "gulp-zip": "*",
     "url-loader": "^0.5.8"
   }
 }
