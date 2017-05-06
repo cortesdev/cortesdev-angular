@@ -1,5 +1,5 @@
 
-var myApp = angular.module('myApp', ['typer']);
+var myApp = angular.module('myApp', []);
 
 myApp.config(function(){
 
@@ -15,7 +15,7 @@ myApp.config(function(){
 //
 // });
 
-
-myApp.controller("myController" , function ($scope) {
-  $scope.message = "Full-Stack/UX Designer and Front-End Developer!";
-});
+//
+// myApp.controller("myController" , function ($scope) {
+//   $scope.message = "Full-Stack/UX Designer and Front-End Developer!";
+// });
