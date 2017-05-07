@@ -608,10 +608,37 @@ canvas {
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
-  padding: 0; }
+  padding: 20px 13px; }
   @media (min-width: 768px) {
     #container {
-      max-width: 80%; } }
+      max-width: 80%;
+      padding: 0; } }
+
+.main {
+  position: absolute;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .main {
+      position: relative;
+      width: 100%; } }
+
+.Intro {
+  margin-top: 60px;
+  pointer-events: none; }
+  @media (min-width: 768px) {
+    .Intro {
+      margin-top: 100px; } }
+
+.Intro p {
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 32px;
+  max-width: 100%; }
+  @media (min-width: 768px) {
+    .Intro p {
+      font-size: 50px; } }
+  .Intro p.grey {
+    color: #909090; }
 
 h1 {
   font-weight: bold;
@@ -623,14 +650,8 @@ h1 {
       font-size: 35px; } }
   @media (min-width: 768px) {
     h1 {
-      font-size: 45px; } }
-
-.Intro {
-  margin-top: 60px;
-  pointer-events: none; }
-  @media (min-width: 768px) {
-    .Intro {
-      margin-top: 100px; } }
+      font-size: 45px;
+      max-width: 100%; } }
 
 footer {
   position: absolute;
